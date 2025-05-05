@@ -1,0 +1,118 @@
+.hero {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+}
+
+/* Video Background */
+.hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Overlay Content */
+.hero-caption {
+    position: absolute;
+    bottom: 20%;
+    left: 5%;
+    color: white;
+    z-index: 2;
+    width: 80%;
+}
+
+.caption-img {
+    width: 100%;
+    max-width: 650px;
+    margin-bottom: 30px;
+}
+
+.hero-caption p {
+    max-width: 700px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.hero-btns {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 50px;
+}
+
+.hero-btns .btn img {
+    width: 35px;
+}
+
+.hero-btns .btn {
+    border: 0;
+    outline: 0;
+    padding: 8px 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    background: white;
+    color: black;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.hero-btns .btn.dark-btn {
+    color: #fff;
+    background: #6d6d6eb3;
+}
+
+.hero-btns .btn:hover {
+    background: #ffffffbf;
+}
+
+.hero-btns .btn.dark-btn:hover {
+    background: #6d6d6e66;
+}
+
+
+@media (max-width:1025px) {
+    .hero-caption .titlecards{
+        display: none;
+    }
+    .hero-btns{
+        margin-bottom: 30px;
+    }
+    
+}
+@media (max-width: 800px) {
+    .hero-caption{
+        padding-left: 4%;
+    }
+    .caption-img{
+        margin-bottom: 10px;
+        width: 40px;
+    }
+    .hero-caption p{
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+    .hero-btns .btn img{
+        width: 20px;
+    }
+    .more-cards{
+        padding-left: 4%;
+    }
+    
+}
+@media (max-width: 500px){
+    .caption-img{
+        display: none;
+    }
+    .hero-btns .btn img{
+        width: 15px;
+    }
+    .hero-btns.btn{
+        padding: 4px 10px;
+        gap: 5px;
+        font-size: 10px;
+    }
+}

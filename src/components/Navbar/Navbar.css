@@ -1,0 +1,208 @@
+.navbar { 
+    width: 100%;
+    padding: 20px 6%;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    font-size: 14px;
+    color: white;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 10%, transparent);
+    z-index: 10;
+}
+.nav-dark {
+    background-color: rgba(0, 0, 0, 0.7); /* Dark background */
+  }
+
+/* Left Section */
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.navbar-left img {
+    width: 150px;
+}
+
+.navbar-left ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    padding-left: 67px;
+    color: white !important;
+}
+
+.navbar-left ul li {
+    cursor: pointer;
+    font-size: 20px;
+    color: white !important;  /* Ensures the text color is white */
+}
+.navbar-left ul li, .navbar-left ul li a {
+    color: white !important;  /* Apply directly to the <a> tags */
+    text-decoration: none;
+}
+
+
+
+
+/* Right Section */
+.navbar-right {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.navbar-right .icons {
+    width: 30px;
+    cursor: pointer;
+}
+
+
+
+/* --- FIXED SEARCH BAR --- */
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Search Icon */
+.search-icon {
+    width: 30px;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Search Bar */
+.search-bar {
+    width: 0;
+    height: 40px;
+    padding: 5px 10px;
+    font-size: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    outline: none;
+    transition: width 0.3s ease-in-out, padding 0.3s ease-in-out;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+}
+
+/* When Search is Active */
+.search-container.active .search-bar {
+    width: 250px;
+    opacity: 5;
+    padding: 5px 10px;
+}
+
+/* Hide Search Icon when Bar is Active */
+.search-container.active .search-icon {
+    display: none;
+}
+
+/* --- PROFILE DROPDOWN MENU  --- */
+.navbar-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+/* --- PROFILE DROPDOWN MENU FIX --- */
+.dropdown {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: rgba(25, 25, 25, 0.95); /* Ensure solid dark background */
+    padding: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 999; /* Ensure it's above other elements */
+    width: 200px; /* Set a fixed width */
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+/* Show dropdown on hover */
+.navbar-profile:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Remove unwanted spacing between items */
+.dropdown p,
+.dropdown ul li {
+    padding: 10px 15px;
+    margin: 0;
+    font-size: 14px; /* Adjust font size */
+    font-weight: 500;
+    color: white;
+    transition: background 0.2s ease, text-decoration 0.2s ease;
+    cursor: pointer;
+    white-space: nowrap; /* Prevent text from breaking */
+}
+
+/* Fix dropdown list styles */
+.dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Fix for About Us and Help Centre */
+.dropdown a {
+    display: block;
+    padding: 1px ;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Hover effect */
+.dropdown p:hover,
+.dropdown a:hover {
+    background: rgba(255, 255, 255, 0.15);
+    text-decoration: none;
+}
+
+/* Fix issue where Sign Out is sticking to the bottom */
+.dropdown p:last-child {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 5px;
+    padding-top: 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 800px) {
+    .navbar {
+        padding: 20px 4%;
+    }
+    .navbar-left ul {
+        display: none;
+    }
+    .navbar img {
+        height: 25px;
+    }
+}
+
+@media (max-width: 500px) {
+    .navbar img {
+        height: 20px;
+    }
+    .navbar-right {
+        gap: 10px;
+    }
+    .search-container.active .search-bar {
+        width: 150px;
+    }
+}

@@ -1,0 +1,11 @@
+.more-cards{
+    padding-top: 3%;
+    ;
+}
+@media (max-width: 800px) {
+    
+    .more-cards{
+        padding-left: 4%;
+    }
+    
+}

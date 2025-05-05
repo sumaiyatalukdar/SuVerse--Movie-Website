@@ -1,0 +1,70 @@
+.footer {
+    padding: 30px 4%;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center; /* Center-align text for icons and footer text */
+    color: #aaa; /* Match text color to the screenshot */
+}
+
+.footer-icons {
+    display: flex;
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.footer-icons img {
+    width: 30px;
+    cursor: pointer;
+}
+
+.footer ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Evenly space out columns */
+    gap: 20px; /* Adjust space between links */
+    margin-bottom: 40px;
+    list-style: none;
+    padding: 0; /* Remove extra padding */
+    text-align: left; /* Align links to the left */
+}
+
+.footer ul li {
+    font-size: 14px; /* Adjust font size for the links */
+    color: #aaa; /* Match text color */
+    cursor: pointer;
+}
+
+.footer ul li:hover {
+    text-decoration: underline; /* Add hover effect for links */
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+.service-code {
+    background: transparent;
+    border: 1px solid #aaa;
+    color: #aaa;
+    padding: 5px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.service-code:hover {
+    background: #555; /* Slight background color change on hover */
+    color: #fff; /* Text color change on hover */
+}
+@media (max-width:800px) {
+    .footer-icons img{
+        width: 25px;
+    }
+    .footer ul{
+       grid-template-columns: auto auto; 
+       gap: 8px;
+       font-size: 14px;
+    }
+    
+}
